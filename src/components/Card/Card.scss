@@ -1,0 +1,91 @@
+$cardWidth: 200px;
+$cardIconScale: 2.5;
+
+.Card {
+  padding: 10px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  width: $cardWidth;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  background-color: rgb(50, 61, 77);
+
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .cost {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    font-family: sans-serif;
+  }
+
+  .cost-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    margin: -5px;
+    background-image: url("../../media/small-frames.png");
+  }
+
+  .name {
+    font-family: "Mali", cursive;
+    font-weight: bold;
+  }
+
+  .icon-container {
+    height: calc(81px * #{$cardIconScale});
+    width: 100%;
+    position: relative;
+  }
+
+  .icon {
+    background-image: url("../../media/icons.png");
+    width: 76px;
+    height: 76px;
+    transform: scale($cardIconScale);
+    display: block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-left: -38px;
+    margin-top: -38px;
+  }
+
+  .icon-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../media/frames.png");
+  }
+
+  .body {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 90px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Patrick Hand", cursive;
+    padding: 5px;
+    letter-spacing: 1px;
+    font-size: 1.3rem;
+  }
+}
